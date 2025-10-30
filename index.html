@@ -820,7 +820,6 @@
                 let reasonItems = [];
                 if (product.reason) {
                     reasonItems = product.reason.split(',').map(item => item.trim());
-                    reasonItems = reasonItems.split('，').map(item => item.trim());
                 }
 
                 // 格式化日期 - 使用隨機日期作為上次變更時間
