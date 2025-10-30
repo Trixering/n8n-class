@@ -802,7 +802,7 @@
                 const row = document.createElement('tr');
 
                 // 計算當前價格
-                const currentPrice = product.basePrice + (product.priceDiff || 0);
+                const currentPrice = product.basePrice - (product.priceDiff || 0);
 
                 // 決定價格變動的樣式
                 let priceChangeClass = 'neutral';
@@ -840,8 +840,8 @@
                         </div>
                     </td>
                     <td>${product.sku}</td>
-                    <td>$${product.basePrice}</td>
-                    <td class="fw-bold">$${currentPrice}</td>
+                    <td>$${currentPrice}</td>
+                    <td class="fw-bold">$${product.basePrice}</td>
                     <td>
                         <span class="price-diff ${priceChangeClass}">
                             ${priceChangeIcon}${product.priceDiff > 0 ? '+' : ''}${product.priceDiff || 0}
