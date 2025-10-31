@@ -823,8 +823,8 @@
                 }
 
                 // 格式化日期 - 使用隨機日期作為上次變更時間
-                const lastChangeDate = new Date();
-                lastChangeDate.setDate(lastChangeDate.getDate() - Math.floor(Math.random() * 30));
+                // product.daysSinceLastSale 格式:2025-10-31T02:17:00.727Z
+                const lastChangeDate = new Date(product.daysSinceLastSale);
                 const formattedDate = lastChangeDate.toLocaleDateString('zh-TW');
 
                 row.innerHTML = `
